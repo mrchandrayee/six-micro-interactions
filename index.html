@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#070e1c"><title>Six Micro-Interactions — Motion Lab</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="header"><a class="logo" href="#"><span>✳</span> MOTION LAB <small>INTERACTION STUDIES</small></a><div class="header-right"><span class="live"></span> SIX MOTION PATTERNS</div></header>
+<main>
+<section class="hero"><div class="eyebrow"><i></i> INTERACTION DESIGN / FIELD NOTES 06</div><h1>Small motion.<br><em>Big difference.</em></h1><p>Six tactile UI patterns, rebuilt as hands-on experiments. Tap, drag, scroll, hold, and swipe to feel the difference.</p><div class="hero-meta"><span>06 EXPERIMENTS</span><b></b><span>INTERACTIVE DEMOS</span></div></section>
+<div class="experiments">
+<section class="experiment" id="speed-dial">
+ <div class="exp-head"><div><div class="number">01 · SPEED DIAL</div><h2>Fan out, don't <em>pop.</em></h2><p>Actions fan outward with a stagger instead of appearing all at once.</p></div><span class="count">01 / 06</span></div>
+ <div class="stage dial-stage"><div class="stage-top"><span>FLOATING ACTION MENU</span><span class="slow">STAGGER · 100 MS</span></div><div class="dial-wrap"><button class="dial-action action-a" aria-label="Share">↗</button><button class="dial-action action-b" aria-label="Save">▱</button><button class="dial-action action-c" aria-label="Schedule">◷</button><button class="dial-main" id="dialToggle" aria-label="Open speed dial">+</button></div><div class="stage-bottom"><span>Tap the main action</span><span id="dialState">CLOSED</span></div></div>
+ <div class="spec"><span>+ TURNS 45°</span><span>·</span><span>100 MS APART</span></div>
+</section>
+
+<section class="experiment" id="slider">
+ <div class="exp-head"><div><div class="number">02 · SLIDER</div><h2>Grow when <em>grabbed.</em></h2><p>The thumb scales up while dragging; the value bubble follows the interaction.</p></div><span class="count">02 / 06</span></div>
+ <div class="stage slider-stage"><div class="stage-top"><span>DRAG TO INTERACT</span><span class="slow">THUMB SCALE · 140%</span></div><div class="slider-demo"><output id="sliderBubble" class="bubble">20</output><input id="demoSlider" type="range" min="0" max="100" value="20" aria-label="Demo slider"><div class="slider-readout"><span>0</span><strong id="sliderValue">20</strong><span>100</span></div></div><div class="stage-bottom"><span>Grab the thumb and move it</span><span id="grabState">IDLE</span></div></div>
+ <div class="spec"><span>THUMB 140%</span><span>·</span><span>BUBBLE TRAILS</span></div>
+</section>
+
+<section class="experiment" id="large-title">
+ <div class="exp-head"><div><div class="number">03 · LARGE TITLE</div><h2>Shrink, don't <em>vanish.</em></h2><p>A large heading reduces in size as the content scrolls, remaining visible as a compact title.</p></div><span class="count">03 / 06</span></div>
+ <div class="stage title-stage"><div class="stage-top"><span>SCROLL INSIDE THE PANEL</span><span class="slow">34 → 18 PX</span></div><div class="scroll-demo" id="scrollDemo"><div class="scroll-sticky"><h3 id="scrollTitle">Inbox</h3><span class="scroll-pill">INBOX / 24</span></div><div class="mail-list"><div class="mail"><i class="avatar blue"></i><div><b>Design review</b><small>Updated the prototype for tomorrow…</small></div><time>9:41</time></div><div class="mail"><i class="avatar yellow"></i><div><b>Project update</b><small>Here are the latest milestones…</small></div><time>9:18</time></div><div class="mail"><i class="avatar pink"></i><div><b>New message</b><small>Thanks for sharing the details…</small></div><time>8:52</time></div><div class="mail"><i class="avatar green"></i><div><b>Weekly digest</b><small>Your weekly activity summary…</small></div><time>Yesterday</time></div><div class="mail"><i class="avatar purple"></i><div><b>Invoice ready</b><small>Your document is ready to view…</small><time>Yesterday</time></div></div><div class="mail"><i class="avatar blue"></i><div><b>Team notes</b><small>Notes from the team meeting…</small><time>Mon</time></div></div></div></div><div class="stage-bottom"><span>Scroll the inbox panel</span><span id="titleSize">34 PX</span></div></div>
+ <div class="spec"><span>34 → 18 PX</span><span>·</span><span>TIED TO SCROLL</span></div>
+</section>
+
+<section class="experiment" id="long-press">
+ <div class="exp-head"><div><div class="number">04 · LONG PRESS</div><h2>Sink, then <em>lift.</em></h2><p>Press and hold a row. It sinks first, then lifts subtly when the hold completes.</p></div><span class="count">04 / 06</span></div>
+ <div class="stage press-stage"><div class="stage-top"><span>PRESS AND HOLD A ROW</span><span class="slow">HOLD · 400 MS</span></div><div class="press-list"><button class="press-row"><i class="tile yellow">▣</i><span><b>Yellow folder</b><small>12 items · Updated today</small></span><span class="row-more">•••</span></button><button class="press-row" id="holdTarget"><i class="tile cyan">▣</i><span><b>Blue folder</b><small>8 items · Updated yesterday</small></span><span class="row-more">•••</span><span class="hold-ring"></span></button><button class="press-row"><i class="tile pink">▣</i><span><b>Red folder</b><small>4 items · Updated Monday</small></span><span class="row-more">•••</span></button></div><div class="stage-bottom"><span id="holdMessage">Hold the middle row for 400 ms</span><span id="holdState">READY</span></div></div>
+ <div class="spec"><span>HOLD 400 MS</span><span>·</span><span>LIFTS 5%</span></div>
+</section>
+
+<section class="experiment" id="page-dots">
+ <div class="exp-head"><div><div class="number">05 · PAGE DOTS</div><h2>Stretch, then <em>snap.</em></h2><p>Pagination dots stretch during a page change, then settle into a crisp active dot.</p></div><span class="count">05 / 06</span></div>
+ <div class="stage dots-stage"><div class="stage-top"><span>CLICK OR SWIPE THE CARDS</span><span class="slow">EDGE · 130 MS APART</span></div><div class="carousel-window" id="carouselWindow"><div class="carousel-track" id="carouselTrack"><article class="slide slide-blue"><small>01 / EXPLORE</small><h3>Find your<br>next idea.</h3><span>DISCOVER MORE ↗</span></article><article class="slide slide-gold"><small>02 / CREATE</small><h3>Make it<br>matter.</h3><span>START BUILDING ↗</span></article><article class="slide slide-pink"><small>03 / SHARE</small><h3>Bring it<br>to life.</h3><span>SHARE YOUR WORK ↗</span></article><article class="slide slide-violet"><small>04 / REPEAT</small><h3>Keep the<br>momentum.</h3><span>GO AGAIN ↗</span></article></div></div><div class="dots" id="dots"><button class="active" aria-label="Page 1"></button><button aria-label="Page 2"></button><button aria-label="Page 3"></button><button aria-label="Page 4"></button></div><div class="stage-bottom"><span>Tap dots or swipe cards</span><span id="pageReadout">PAGE 01 / 04</span></div></div>
+ <div class="spec"><span>EDGES 130 MS APART</span></div>
+</section>
+
+<section class="experiment" id="side-menu">
+ <div class="exp-head"><div><div class="number">06 · SIDE MENU</div><h2>Push, don't <em>cover.</em></h2><p>The page moves and scales to make room for navigation instead of hiding beneath an overlay.</p></div><span class="count">06 / 06</span></div>
+ <div class="stage menu-stage"><div class="stage-top"><span>OPEN THE SIDE MENU</span><span class="slow">SLIDE · 150 MS</span></div><div class="menu-demo"><aside class="side-nav" id="sideNav"><div class="nav-profile"><span class="profile-orb">●</span><b>Studio Space</b></div><button class="nav-item selected">◈ <span>Overview</span></button><button class="nav-item">▦ <span>Projects</span></button><button class="nav-item">◷ <span>Activity</span></button><button class="nav-item">⚙ <span>Settings</span></button></aside><div class="page-shell" id="pageShell"><div class="mock-page"><div class="mock-top"><button id="menuToggle" aria-label="Toggle side menu">☰</button><span>YOUR DASHBOARD</span><span>●</span></div><div class="mock-banner"><small>MONDAY, NOVEMBER 19</small><h3>Good evening.</h3><p>Here's what's happening today.</p></div><div class="mock-stats"><div><small>PROJECTS</small><b>12</b></div><div><small>COMPLETE</small><b>08</b></div></div><div class="mock-line"></div><div class="mock-line short"></div></div></div></div><div class="stage-bottom"><span>Tap menu icon to open / close</span><span id="menuState">CLOSED</span></div></div>
+ <div class="spec"><span>PAGE → 86%</span><span>·</span><span>SLIDES 150 PX</span></div>
+</section>
+</div>
+<section class="outro"><div class="eyebrow"><i></i> MOTION LAB / SUMMARY</div><h2>Make every<br><em>interaction count.</em></h2><p>Motion should communicate state, guide attention, and reward intent—not just decorate the interface.</p><a href="#speed-dial">↑ BACK TO EXPERIMENTS</a></section>
+<footer><span>MOTION LAB / INTERACTION STUDIES</span><span>BUILT FOR THE DETAILS.</span></footer>
+</main>
+<script src="app.js"></script>
+</body></html>
